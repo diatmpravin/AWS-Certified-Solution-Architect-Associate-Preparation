@@ -1,8 +1,10 @@
 {
-  	"Version": "2012-10-17",
-  	"Statement": {
-    	"Effect": "Allow",
-    	"Action": "ec2:Describe*",
-    	"Resource":"arn:aws:ec2:us-east-1:accountid:instance/i-instance-id"
-  	}
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "ec2:*",
+            "Resource": "arn:aws:ec2:${AWS::Region}:${AWS::AccountId}:instance/Instance-ID"
+        }
+    ]
 }
